@@ -20,3 +20,15 @@ ls *_end.fastq | xargs -P 4 -tI{} fastqc -o fastqc {}
 mkdir multiqc      
 multiqc -o multiqc fastqc
 ```
+Подрежу полученные чтения
+```
+platanus_trim R1_paired_end.fastq R2_paired_end.fastq
+platanus_internal_trim R1_mate_end.fastq R2_mate_end.fastq
+```
+Снова проверю качество с помощью программ fastQC и multiQC:
+```
+mkdir Trim
+ls *trimmed | xargs -tI{} fastqc -o Trim {}
+mkdir multiqc2  
+multiqc -o multiqc2 Trim 
+```
