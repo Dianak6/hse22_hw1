@@ -22,6 +22,8 @@ multiqc -o multiqc fastqc
 ```
 Отчет
 ![image](https://user-images.githubusercontent.com/114064027/193250715-c84dff96-19e6-40a5-b088-6195f6ed021e.png)
+![image](https://user-images.githubusercontent.com/114064027/193250894-e50a027c-d528-4e9f-abe6-6a5c06d715ea.png)
+![image](https://user-images.githubusercontent.com/114064027/193250981-226eb64f-2f73-4b3a-8485-a948d05ffa22.png)
 
 Подрежу полученные чтения
 ```
