@@ -42,4 +42,17 @@ multiqc -o multiqc2 Trim
 ![image](https://user-images.githubusercontent.com/114064027/193251301-f776798d-c723-4077-8e2e-c6cd52f8c7fc.png)
 ![image](https://user-images.githubusercontent.com/114064027/193251363-8c1997f7-ea59-407d-9dbc-3cee7a6ab3d5.png)
 
+С помощью программы “platanus assemble” собреру контиги из подрезанных чтений
+```
+mkdir platanus
+time platanus assemble -o Poil -t 8 -n 20 -f R1_paired_end.fastq.trimmed R2_paired_end.fastq.trimmed 2> ~/platanus/Final1.log
+```
+С помощью программы “ platanus scaffold” соберу скаффолды из контигов, а также из подрезанных чтений
 
+```
+time platanus scaffold -o Poil -t 1 -c Poil_contig.fa -IP1 *.trimmed -OP2 *.int_trimmed 2> ~/platanus/Final_scaffold.log
+```
+С помощью программы “ platanus gap_close” уменьшила кол-во гэпов с помощью подрезанных чтений
+```
+platanus gap_close -o Poil -t 1 -c Poil_scaffold.fa -IP1 *.trimmed -OP2 *.int_trimmed 2> ~/platanus/gapclose.log
+```
