@@ -20,6 +20,9 @@ ls *_end.fastq | xargs -P 4 -tI{} fastqc -o fastqc {}
 mkdir multiqc      
 multiqc -o multiqc fastqc
 ```
+Отчет
+![image](https://user-images.githubusercontent.com/114064027/193250715-c84dff96-19e6-40a5-b088-6195f6ed021e.png)
+
 Подрежу полученные чтения
 ```
 platanus_trim R1_paired_end.fastq R2_paired_end.fastq
@@ -32,3 +35,5 @@ ls *trimmed | xargs -tI{} fastqc -o Trim {}
 mkdir multiqc2  
 multiqc -o multiqc2 Trim 
 ```
+
+
