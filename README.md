@@ -52,7 +52,7 @@ time platanus assemble -o Poil -t 8 -n 20 -f R1_paired_end.fastq.trimmed R2_pair
 ```
 time platanus scaffold -o Poil -t 1 -c Poil_contig.fa -IP1 *.trimmed -OP2 *.int_trimmed 2> ~/platanus/Final_scaffold.log
 ```
-С помощью программы “ platanus gap_close” уменьшила кол-во гэпов с помощью подрезанных чтений
+С помощью программы “ platanus gap_close” уменьшу кол-во гэпов с помощью подрезанных чтений
 ```
 platanus gap_close -o Poil -t 1 -c Poil_scaffold.fa -IP1 *.trimmed -OP2 *.int_trimmed 2> ~/platanus/gapclose.log
 ```
