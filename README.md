@@ -59,3 +59,18 @@ platanus gap_close -o Poil -t 1 -c Poil_scaffold.fa -IP1 *.trimmed -OP2 *.int_tr
 ```
 Проанализирую полученные с помощью platanus данные в Google Collab
 https://colab.research.google.com/drive/1Swqf955lHseiRPRSuiOpiZt90z_LUfM6?usp=sharing
+
+![image](https://user-images.githubusercontent.com/114064027/193255753-4b876332-d638-4170-ade5-d12bfcbe579d.png)
+
+![image](https://user-images.githubusercontent.com/114064027/193258598-c8d6a510-4bcd-4c82-b6c1-23786553c13a.png)
+
+![image](https://user-images.githubusercontent.com/114064027/193260636-6f7e1948-2f3c-4764-8ed5-e92f7570a026.png)
+**Общее количество контигов = 622**
+
+**Общая длина = 3927197**
+
+**Длина самого длинного контига = 175819**
+
+**N50 = 55863**
+
+
