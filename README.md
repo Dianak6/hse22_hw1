@@ -41,6 +41,7 @@ multiqc -o multiqc2 Trim
 ![image](https://user-images.githubusercontent.com/114064027/193251244-87bf7d02-a5b7-4731-bab7-684592eb2e8f.png)
 ![image](https://user-images.githubusercontent.com/114064027/193251301-f776798d-c723-4077-8e2e-c6cd52f8c7fc.png)
 ![image](https://user-images.githubusercontent.com/114064027/193251363-8c1997f7-ea59-407d-9dbc-3cee7a6ab3d5.png)
+После подрезания уменьшилось количество чтений (M Seqs), средняя длина (Length). Согласно графику Sequence Quality Histograms, улучшилось качество 
 
 С помощью программы “platanus assemble” собреру контиги из подрезанных чтений
 ```
