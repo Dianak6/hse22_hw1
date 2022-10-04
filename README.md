@@ -91,17 +91,17 @@ https://colab.research.google.com/drive/1Swqf955lHseiRPRSuiOpiZt90z_LUfM6?usp=sh
 
 ![image](https://user-images.githubusercontent.com/114064027/193797831-80af61cc-b554-4e15-be85-ee86a7d52ebd.png)
 
-**Количество участков N = 155
+**Количество участков N = 155**
 
-Количество N = 7524**
+**Количество N = 7524**
 
 Проанализирую данные, полученные после работы platanus gap_close
 
 ![image](https://user-images.githubusercontent.com/114064027/193798216-b8bf2b65-730e-4d21-ae77-3a708d329bc1.png)
 
-**Количество участков N = 32
+**Количество участков N = 32**
 
-Количество N = 2023**
+**Количество N = 2023**
 
 
 
