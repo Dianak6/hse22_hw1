@@ -60,11 +60,11 @@ time platanus gap_close -o Poil -t 1 -c Poil_scaffold.fa -IP1 *.trimmed -OP2 *.i
 Проанализирую полученные с помощью platanus данные в Google Collab
 https://colab.research.google.com/drive/1Swqf955lHseiRPRSuiOpiZt90z_LUfM6?usp=sharing
 
-![image](https://user-images.githubusercontent.com/114064027/193255753-4b876332-d638-4170-ade5-d12bfcbe579d.png)
+![image](https://user-images.githubusercontent.com/114064027/193808184-e27fea92-7335-482b-a7b2-5ca6e7284cda.png)
 
-![image](https://user-images.githubusercontent.com/114064027/193258598-c8d6a510-4bcd-4c82-b6c1-23786553c13a.png)
+![image](https://user-images.githubusercontent.com/114064027/193808319-92383b0f-20fc-4edd-b1cc-346bcf951af6.png)
 
-![image](https://user-images.githubusercontent.com/114064027/193260636-6f7e1948-2f3c-4764-8ed5-e92f7570a026.png)
+
 **Общее количество контигов = 622**
 
 **Общая длина = 3927197**
@@ -75,7 +75,7 @@ https://colab.research.google.com/drive/1Swqf955lHseiRPRSuiOpiZt90z_LUfM6?usp=sh
 
 Анализ скаффолдов
 
-![image](https://user-images.githubusercontent.com/114064027/193263004-e34bed34-6a8a-41ca-ad9c-d318ead933be.png)
+![image](https://user-images.githubusercontent.com/114064027/193808468-ba232693-56ab-4882-b923-403435deca65.png)
 
 Так как самый длинный скаффолд покрывает 50%, то N50=длине самого длинного скаффолда
 
@@ -89,7 +89,8 @@ https://colab.research.google.com/drive/1Swqf955lHseiRPRSuiOpiZt90z_LUfM6?usp=sh
 
 Для самого длинного скаффолда посчитаю количество гэпов
 
-![image](https://user-images.githubusercontent.com/114064027/193797831-80af61cc-b554-4e15-be85-ee86a7d52ebd.png)
+![image](https://user-images.githubusercontent.com/114064027/193808825-1b2997c6-03cd-4e4d-a3da-88f1f32894db.png)
+
 
 **Количество участков N = 155**
 
@@ -97,7 +98,7 @@ https://colab.research.google.com/drive/1Swqf955lHseiRPRSuiOpiZt90z_LUfM6?usp=sh
 
 Проанализирую данные, полученные после работы platanus gap_close
 
-![image](https://user-images.githubusercontent.com/114064027/193798216-b8bf2b65-730e-4d21-ae77-3a708d329bc1.png)
+![image](https://user-images.githubusercontent.com/114064027/193808916-2e33a661-c1d6-4889-9221-05f9ac5fa257.png)
 
 **Количество участков N = 32**
 
