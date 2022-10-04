@@ -103,7 +103,7 @@ https://colab.research.google.com/drive/1Swqf955lHseiRPRSuiOpiZt90z_LUfM6?usp=sh
 
 **Количество N = 2023**
 
-
+Количество участков гэпов и их длина уменьшилась после применение platanus gap_close
 
 
 
