@@ -55,7 +55,7 @@ time platanus scaffold -o Poil -t 1 -c Poil_contig.fa -IP1 *.trimmed -OP2 *.int_
 ```
 С помощью программы “ platanus gap_close” уменьшу кол-во гэпов с помощью подрезанных чтений
 ```
-platanus gap_close -o Poil -t 1 -c Poil_scaffold.fa -IP1 *.trimmed -OP2 *.int_trimmed 2> ~/platanus/gapclose.log
+time platanus gap_close -o Poil -t 1 -c Poil_scaffold.fa -IP1 *.trimmed -OP2 *.int_trimmed 2> gapclose.log
 ```
 Проанализирую полученные с помощью platanus данные в Google Collab
 https://colab.research.google.com/drive/1Swqf955lHseiRPRSuiOpiZt90z_LUfM6?usp=sharing
@@ -86,6 +86,24 @@ https://colab.research.google.com/drive/1Swqf955lHseiRPRSuiOpiZt90z_LUfM6?usp=sh
 **Длина самого длинного скаффолда = 3839079**
 
 **N50 = 3839079**
+
+Для самого длинного скаффолда посчитаю количество гэпов
+
+![image](https://user-images.githubusercontent.com/114064027/193797831-80af61cc-b554-4e15-be85-ee86a7d52ebd.png)
+
+**Количество участков N = 155
+
+Количество N = 7524**
+
+Проанализирую данные, полученные после работы platanus gap_close
+
+![image](https://user-images.githubusercontent.com/114064027/193798216-b8bf2b65-730e-4d21-ae77-3a708d329bc1.png)
+
+**Количество участков N = 32
+
+Количество N = 2023**
+
+
 
 
 
