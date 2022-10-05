@@ -106,5 +106,66 @@ https://colab.research.google.com/drive/1Swqf955lHseiRPRSuiOpiZt90z_LUfM6?usp=sh
 
 Количество участков гэпов и их длина уменьшилась после применение platanus gap_close
 
+Проанализирую качество сборки геном при меньшей выборки
+Проделаю те же действия, что и в первой части работы, но возьму 3млн. и 1млн. чтений типа paired-end и mate-pairs соответственно
+```
+seqtk sample -s606 /usr/share/data-minor-bioinf/assembly/oil_R1.fastq 3000000 > R12_paired_end.fastq
+seqtk sample -s606 /usr/share/data-minor-bioinf/assembly/oil_R2.fastq 3000000 > R22_paired_end.fastq
+seqtk sample -s606 /usr/share/data-minor-bioinf/assembly/oilMP_S4_L001_R1_001.fastq 1000000 > R12_mate_end.fastq
+seqtk sample -s606 /usr/share/data-minor-bioinf/assembly/oilMP_S4_L001_R2_001.fastq 1000000 > R22_mate_end.fastq
 
+mkdir fastqc2
+ls *.fastq | xargs -P 4 -tI{} fastqc -o fastqc2 {}
 
+mkdir multiqc2
+multiqc -o multiqc2 fastqc2
+
+platanus_trim R12_paired_end.fastq R22_paired_end.fastq
+platanus_internal_trim R12_mate_end.fastq R22_mate_end.fastq
+
+mkdir Trim
+ls *trimmed | xargs -tI{} fastqc -o Trim {}
+
+mkdir multiqc22
+multiqc -o multiqc22 Trim
+
+time platanus assemble -o Poil -t 8 -n 20 -f R12_paired_end.fastq.trimmed R22_paired_end.fastq.trimmed 2> ~Final1.log
+time platanus scaffold -o Poil -t 1 -c Poil_contig.fa -IP1 *.trimmed -OP2 *.int_trimmed 2> Final_scaffold.log
+time platanus gap_close -o Poil -t 1 -c Poil_scaffold.fa -IP1 *.trimmed -OP2 *.int_trimmed 2> gapclose.log
+```
+
+Код для дополнительной части работы 
+https://colab.research.google.com/drive/1Vba2IlLfsxVqXpYFBzsuQzkCHxF18Ebf?hl=ru-ru#scrollTo=lGN0C2wxkBiy
+
+В результате работы кода я получила данные:
+Контиги:
+
+**Общее количество контигов = 608**
+
+**Общая длина = 3918469**
+
+**Длина самого длинного контига = 189602**
+
+**N50 = 69740**
+
+Скаффолды:
+
+**Общее количество скаффолдов = 72**
+
+**Общая длина = 3868352**
+
+**Длина самого длинного скаффолда = 3831226**
+
+**N50 = 3831226**
+
+**Количество участков (где 1 или более буква N)= 161**
+
+**Количество символов N = 7606**
+
+После работы platanus gap close
+
+**Количество участков (где 1 или более буква N)= 59**
+
+**Количество символов N = 3524**
+
+Вывод по дополнительной части: с уменьшением числа чтений, уменьшилось количество контигов, но увеличилось число скаффодов и гэпов. Можно сделать вывод, ччто при уменьшении числа выборки качество сборки ухудшается.  
